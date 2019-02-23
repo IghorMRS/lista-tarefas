@@ -4,7 +4,7 @@ var lista = [];
 
 carregar();
 
-
+//Função para incluir uma nova tarefa no array
 function incluir(){
 	tabela.innerHTML += "<tr onclick='concluir(this)'><td>"+input.value+"</td>"+
 	"<td>"+
@@ -16,7 +16,7 @@ function incluir(){
 	input.value = "";
 	location.reload();
 }
-
+//Função que lista em forma de tabela as tarefas
 function listar(){
 	tabela.innerHTML="";
 	lista.forEach(function(item,index){
@@ -36,7 +36,7 @@ function listar(){
 		}
 	});
 }
-
+//Função que deifine o evento do botão para alterar uma tarefa ja adicionada
 function alterar(el,ev){
 	var elemento = el;
 	var evento = ev;
@@ -46,7 +46,7 @@ function alterar(el,ev){
 	el.onclick = function(){salvar(elemento,evento);};
 	el.innerText="Salvar";
 }
-
+//Função salvar o valor alterado 
 function salvar(el,ev){
 	var elemento = el;
 	var evento = ev;
@@ -61,7 +61,7 @@ function salvar(el,ev){
 	atualizar();
 	console.log("salvar");
 }
-
+//evento do botão que exclui uma tarefa ja criada
 function excluir(el,ev){
 	ev.stopPropagation();
 	tr = el.parentElement.parentElement;
@@ -71,7 +71,7 @@ function excluir(el,ev){
 	atualizar();
 	listar();
 }
-
+//Função que marca se a tarefa foi ou não concluida
 function concluir(el){
 	idt = el.getAttribute("idt");
 	if(el.className==""){
@@ -83,7 +83,7 @@ function concluir(el){
 	}
 	atualizar();
 }
-
+//Função para atualizar o dado no localStorage
 function atualizar(){
 	var listaString = "";
 	lista.forEach(function(item){
@@ -92,7 +92,7 @@ function atualizar(){
 	listaString = listaString.substring(0,listaString.length-1);
 	localStorage.setItem("lista",listaString);
 }
-
+//Mostrar os elementos ja inclusos no array
 function carregar(){
 	console.log(localStorage.getItem("lista"));
 	if(localStorage.getItem("lista")!=null){
