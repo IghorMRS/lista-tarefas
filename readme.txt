@@ -1,3 +1,7 @@
+Baixe os arquivos dentro do projeto
+
+Execute o arquivo list.html
+
 Inserir tarefa:
 Ao entrar no programam você irá se deparar com a tela. No campo "escreva a tarefa", insira a sua tarefa desejada e pressione em "adicionar tarefa". Você perceberá que a tarefa se localiza no campo tarefas, com duas opções ao lado dela no campo "operações".
 
