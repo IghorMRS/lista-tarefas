@@ -1,4 +1,4 @@
-Baixe os arquivos dentro do projeto
+Baixe os arquivos dentro do projeto.
 
 Execute o arquivo list.html. Clique com o botão direito no arquivo e clique em abrir com o navegador desejado, ou abra uma nova guia no navegador e clique em ctrl + o, localize a pasta do arquivo e execute-o.
 
